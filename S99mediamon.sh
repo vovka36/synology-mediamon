@@ -4,7 +4,7 @@
 case "$1" in
   start|"")
     #start the monitoring daemon
-    python3 /volume1/homes/admin/mediamon.py
+    nohup env LC_ALL=en_US.utf8 python3 /volume1/homes/admin/mediamon.py
     ;;
   restart|reload|force-reload)
     echo "Error: argument '$1' not supported" >&2
